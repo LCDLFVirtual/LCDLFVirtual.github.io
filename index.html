@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="C.jpg">
+    <meta charset="UTF-8">
+    <title>Estadísticas Semanales</title>
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            padding: 0;
+        }
+
+        table {
+            background: #ffffff;
+            text-align: center;
+            font-size: 80%;
+            width: 100;
+            border-collapse: collapse;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+             margin-top: 50px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+    
+        .orchid { background: orchid; }
+        .orange { background: orange; }
+        .lightblue { background: lightblue; }
+        .lightgreen { background: lightgreen; }
+        .ccff66 { background: #ccff66; }
+        .red { background: red; color: white; }
+        .dodgerblue { background: dodgerblue; }
+        .gold { background: gold; }
+        .silver { background: silver; }
+        .tan { background: tan; }
+        .aquamarine { background: aquamarine; }
+        .FFFFDD { background: #FFFFDD; }
+        .grey { background: grey; }
+        .fcf { background: #fcf; }
+        .white {background: white;}
+
+        .legend {
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            table {
+                font-size: 60%;
+            }
+
+            th, td {
+                padding: 3px;
+            }
+
+            .legend-box {
+                width: 15px;
+                height: 15px;
+            }
+
+            .legend-item {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                border: none;
+            }
+
+            th, td {
+                font-size: 50%;
+                padding: 2px;
+            }
+
+            .legend-box {
+                width: 10px;
+                height: 10px;
+            }
+
+            .legend-item {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+  <tr>
+    <th>Pos.</th>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Profesión</th>
+    <th>Resultado</th>
+    <th>Nom.</th>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td>Trueno</td>
+    <td>22</td>
+    <td>Rapero</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Laura Leon "Tesorito"</td>
+    <td>72</td>
+    <td>Actriz y cantante</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td>Nicole Wallace</td>
+    <td>22</td>
+    <td>Actriz y cantante</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td>Emilio Osorio</td>
+    <td>22</td>
+    <td>Actor y cantante</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>1</td>
+  
+  </tr>
+  <tr>
+    <td></td>
+    <td>Nadia Ferreira</td>
+    <td>25</td>
+    <td>Modelo</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>4</td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td>Eduardo Brito</td>
+    <td>34</td>
+    <td>Actor y cantante</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+   
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ane Rot</td>
+    <td>26</td>
+    <td>Actriz</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>1</td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td>Jennifer Tilly</td>
+    <td>66</td>
+    <td>Actriz</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+ 
+  </tr>
+  <tr>
+    <td></td>
+    <td>Rhea Ripley</td>
+    <td>28</td>
+    <td>Luchadora Profesional</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td>Gabriel Guevara</td>
+    <td>23</td>
+    <td>Actor</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+   
+  </tr>
+  <tr>
+    <td></td>
+    <td>Fernando Lozada</td>
+    <td>35</td>
+    <td>Influencer y chico reality</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Simon Vargas</td>
+    <td>31</td>
+    <td>Artista musical</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+  </tr>
+
+<tr>
+    <td></td>
+    <td>Ariadna Gutierrez</td>
+    <td>30</td>
+    <td>Modelo</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+  </tr>
+
+<tr>
+    <td></td>
+    <td>Karely Ruiz</td>
+    <td>24</td>
+    <td>Influencer</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+  </tr>
+
+<tr>
+    <td></td>
+    <td>Feirly Gab</td>
+    <td>23</td>
+    <td>YouTuber</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>3</td>
+  </tr>
+
+<tr>
+    <td></td>
+    <td>Jenni Rivera</td>
+    <td>43</td>
+    <td>Cantante</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td></td>
+    <td>Talia Eisset</td>
+    <td>31</td>
+    <td>Artista Musical</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+  </tr>
+<tr>
+    <td></td>
+    <td>Fernando Colunga</td>
+    <td>58</td>
+    <td>Actor</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td>2</td>
+  </tr>
+<tr>
+    <td></td>
+    <td>Ana Lago</td>
+    <td>29</td>
+    <td>Gimnasta</td>
+    <td style="background-color: lightgreen;">En competencia</td>
+    <td></td>
+  </tr>
+<tr>
+    <td>20.°</td>
+    <td>Fernando Hernandez "Malilla"</td>
+    <td>25</td>
+    <td>Artista Musical</td>
+    <td style="background-color: #FA8072;">5.° eliminado</td>
+    <td>3</td>
+  </tr>
+<tr>
+    <td>21.°</td>
+    <td>Brendon Urie</td>
+    <td>37</td>
+    <td>Cantautor</td>
+    <td style="background-color: #FA8072;">4.° eliminado</td>
+    <td>1</td>
+  </tr>
+<tr>
+    <td>22.ª</td>
+    <td>Angelica Sepulveda</td>
+    <td>43</td>
+    <td>Figura Publica</td>
+    <td style="background-color: #FA8072;">3.ª eliminada</td>
+    <td>2</td>
+  </tr>
+<tr>
+    <td>23.°</td>
+    <td>Yurem</td>
+    <td>33</td>
+    <td>Actor</td>
+    <td style="background-color: #FA8072;">2.° eliminado</td>
+    <td>1</td>
+  </tr>
+<tr>
+    <td>24.°</td>
+    <td>Maluma</td>
+    <td>30</td>
+    <td>Cantante</td>
+    <td style="background-color: #fcf;;">1.er abandono</td>
+    <td>1</td>
+  </tr>
+<tr>
+    <td>25.ª</td>
+    <td>"Curvy" Zelma Cherem</td>
+    <td>33</td>
+    <td>Artista Musical</td>
+    <td style="background-color: #FA8072;">1.ª eliminada</td>
+    <td>1</td>
+  </tr>
+
+</table>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Participante</th>
+                <th colspan="2" rowspan="2">Semana 1</th>
+                <th rowspan="2">Semana 2</th>
+                <th rowspan="2">Semana 3</th>
+                <th rowspan="2">Semana 4</th>
+                <th rowspan="2">Semana 5</th>
+                <th rowspan="2">Semana 6</th>
+                <th rowspan="2">Semana 7</th>
+                <th rowspan="2">Semana 8</th>
+                <th rowspan="2">Semana 9</th>
+                <th rowspan="2">Semana 10</th>
+                <th rowspan="2">Semana 11</th>
+                <th rowspan="2">Semana 12</th>
+                <th rowspan="2">Semana 13</th>
+                <th rowspan="2">Semana 14</th>
+                <th rowspan="2">Semana 15</th>
+                <th rowspan="2">Semana 16</th>
+                <th colspan="4">Semana 17</th>
+                
+            </tr>
+            <tr>
+                <th>Día 112</th>
+                <th>Día 115</th>
+                <th>Día 118</th>
+                <th>Final</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Trueno</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominado</td>
+                <td class="orange">Nominado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+            </tr>
+            <tr>
+                <td>Tesorito</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightgreen">Líder</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                
+            </tr>
+            <tr>
+                <td>Nicole</td>
+                <td class="orchid">Entra</td>
+                <td class="ccff66">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                
+            </tr>
+            <tr>
+                <td>Emilio</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+    
+            </tr>
+            <tr>
+                <td>Nadia</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+
+                
+            <tr>
+                <td>Eduardo</td>
+               <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Ane</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+               <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Jennifer</td>
+                <td class="orchid">Entra</td>
+                <td class="lightgreen">Líder</td>
+                <td class="ccff66">Salvada</td>
+                <td class="lightgreen">Líder</td>
+                <td class="lightgreen">Líder</td>
+                <td class="ccff66">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            <tr>
+                <td>Rhea</td>
+               <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Gabriel</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="ccff66">Salvado</td>
+                <td class="orange">Nominado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+             
+            </tr>
+            <tr>
+                <td>Fernando L</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="orange">Nominado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Simon</td>
+               <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Ariadna</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+              
+            </tr>
+            <tr>
+                <td>Karely</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Feirly</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+      
+            </tr>
+            <tr>
+                <td>Jenni</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="orange">Nominada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+              
+            </tr>
+            <tr>
+                <td>Talia</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+         
+            </tr>
+            <tr>
+                <td>Fernando C</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="orange">Nominado</td>
+                <td class="orange">Nominado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td class="grey"></td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+                <td class="lightblue">Salvada</td>
+            
+                <th rowspan="1"></th>
+                <th colspan="1" rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th>
+                <th rowspan="1"></th> 
+            </tr>
+            <tr>
+                <td>Malilla</td>
+                <td class="orchid">Entra</td>
+               <td class="lightblue">Salvado</td>
+               <td class="orange">Nominado</td>
+                <td class="ccff66">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="orange">Nominado</td>
+                <td class="red">Eliminado</td>
+                <td colspan="14" class="grey"></td>
+               
+            </tr>
+            <tr>
+                <td>Brendon</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="lightblue">Salvado</td>
+                <td class="orange">Nominado</td>
+                <td class="red">Eliminado</td>
+                <td colspan="15" class="grey"></td>
+                
+            <tr>
+                <td>Angelica</td>
+                <td class="grey"></td>
+                <td colspan="1 "class="orchid">Entra</td>
+                <td class="orange">Nominada</td>
+                <td class="orange">Nominada</td>
+                <td class="red">Eliminada</td>
+                <td colspan="16" class="grey"></td>   
+            <tr>
+                <td>Yurem</td>
+                <td class="orchid">Entra</td>
+                <td class="lightblue">Salvado</td>
+                <td class="orange">Nominado</td>
+                <td class="red">Eliminado</td>
+                <td colspan="17" class="grey"></td>
+            </tr>
+            <tr>
+                <td>Maluma</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominado</td>
+                <td class="lightgreen">Lider</td>
+                <td class="fcf">Abandona</td>
+                <td colspan="17" class="grey"></td>
+                
+            </tr>
+            <tr>
+                <td>Curvy</td>
+                <td class="orchid">Entra</td>
+                <td class="orange">Nominada</td>
+                <td class="red">Eliminada</td>
+                <td colspan="18" class="grey"></td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+<div class="legend">
+        <div class="legend-item">
+            <div class="legend-box orchid"></div>
+            <span>Entra</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box lightgreen"></div>
+            <span>Inmune y/o líder de la casa.</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box lightblue"></div>
+            <span>Salvado(a) de la nominación.</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box ccff66"></div>
+            <span>Salvado(a) de la nominación por el/la líder u otro(a) habitante.</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box orange"></div>
+            <span>Nominado(a) para la votación del publico.</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box red"></div>
+            <span>Eliminado(a) por el publico tras ser nominado(a).</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box grey"></div>
+            <span>Fuera de la competencia.</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-box fcf"></div>
+            <span>Abandonó la competencia.</span>
+        </div>
+</body>
+</html>
