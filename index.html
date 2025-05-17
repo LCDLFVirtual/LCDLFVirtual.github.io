@@ -67,21 +67,14 @@
             background: #ffffff;
             text-align: center;
             font-size: 80%;
-            width: 100;
+            width: 150px;
             border-collapse: collapse;
-            margin: 50px auto 0 auto;
+            margin: 0 auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
+             margin-top: 50px;
+
         }
-     .tabla-competencia{
-        margin: 50px auto 0 auto;
-    margin-top: 50px; 
-     }
-     .tabla-desempeño {
-    margin: 20px auto 0 auto;
-    margin-top: 30px;
-    margin-right: 33%; 
-}
 
         th, td {
             border: 1px solid black;
@@ -139,8 +132,8 @@
             }
 
             .legend-box {
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
             }
 
             .legend-item {
@@ -149,26 +142,28 @@
         }
 
         @media (max-width: 480px) {
-    .tabla-competencia,
-    .tabla-desempeño {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        border: none;
-        box-sizing: border-box;
-    }
+            table {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+                white-space: nowrap;
+                border: none;
+                box-sizing: border-box;
 
-    th, td {
-        font-size: 50%;
-        padding: 2px;
-        border: 1px solid black;
-        border-color: darkgray;
-    }
-}
+            }
+
+            th, td {
+                font-size: 50%;
+                padding: 2px; 
+                border: 1px solid black;
+                border-color:darkgray; 
+
+               
+                }
+
             .legend-box {
-                width: 20px;
-                height: 20px;
+                width: 10px;
+                height: 10px;
             }
 
             .legend-item {
@@ -181,7 +176,7 @@
         
     </style>
 </head>
-<table border="1" class="tabla-desempeño">
+<table border="1">
   <tr>
     <th>Pos.</th>
     <th>Nombre</th>
@@ -452,7 +447,7 @@
     <td>1</td>
   </tr>
 </table>
-    <table >
+    <table>
         <thead>
             <tr>
                 <th rowspan="2">Participante</th>
