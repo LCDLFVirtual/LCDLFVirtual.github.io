@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas Semanales</title>
     <style>
- {
+     * {
   box-sizing: border-box;
 }
 .tooltip {
@@ -67,13 +67,21 @@
             background: #ffffff;
             text-align: center;
             font-size: 80%;
-            width: 100px;
+            width: 100;
             border-collapse: collapse;
             margin: 50px auto 0 auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
-             margin-top: 50px;
         }
+     .tabla-competencia{
+        margin: 50px auto 0 auto;
+    margin-top: 50px; 
+     }
+     .tabla-desempeño {
+    margin: 30px auto 0 auto;
+    margin-top: 30px; 
+    margin-right: 100 ;
+}
 
         th, td {
             border: 1px solid black;
@@ -141,25 +149,23 @@
         }
 
         @media (max-width: 480px) {
-            table {
-                display: block;
-                width: 100%;
-                overflow-x: auto;
-                white-space: nowrap;
-                border: none;
-                box-sizing: border-box;
+    .tabla-competencia,
+    .tabla-desempeño {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: none;
+        box-sizing: border-box;
+    }
 
-            }
-
-            th, td {
-                font-size: 50%;
-                padding: 2px; 
-                border: 1px solid black;
-                border-color:darkgray; 
-
-               
-                }
-
+    th, td {
+        font-size: 50%;
+        padding: 2px;
+        border: 1px solid black;
+        border-color: darkgray;
+    }
+}
             .legend-box {
                 width: 10px;
                 height: 10px;
@@ -175,7 +181,7 @@
         
     </style>
 </head>
-<table border="1">
+<table border="1" class="tabla-desempeño">
   <tr>
     <th>Pos.</th>
     <th>Nombre</th>
@@ -446,7 +452,7 @@
     <td>1</td>
   </tr>
 </table>
-    <table>
+    <table class="tabla-competencia">
         <thead>
             <tr>
                 <th rowspan="2">Participante</th>
