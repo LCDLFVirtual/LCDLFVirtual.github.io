@@ -13,35 +13,36 @@
 }
 
 .tooltip sup {
-  color: blue; 
+  color: blue;
   font-size: 0.8em;
   margin-left: 4px;
 }
 
 .tooltip .tooltip-box {
   font-family: Arial, sans-serif;
-  visibility: hidden;
-  opacity: 0;
-  width: auto;
+  position: absolute;
+  bottom: 125%; /* encima del texto */
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #f5f6f7;
-  color: #333;
-  font-size: auto;
-  font-weight: auto;
+  color: #000;
   padding: 10px 12px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  z-index: 100;
-  bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%);
+  white-space: normal;
+  max-width: 280px;
+  width: max-content;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.3s ease;
-  white-space: nowrap;
+  text-align: left;
 }
+
 .tooltip .tooltip-box::after {
   content: "";
   position: absolute;
-  top: auto;
+  top: 100%;
   left: 50%;
   margin-left: -6px;
   border-width: 6px;
@@ -50,8 +51,16 @@
 }
 
 .tooltip:hover .tooltip-box {
-  visibility: visible;
   opacity: 1;
+  visibility: visible;
+}
+
+/* Opcional: mejor visibilidad en pantallas pequeñas */
+@media (max-width: 600px) {
+  .tooltip .tooltip-box {
+    max-width: 90vw;
+    font-size: 0.95em;
+  }
 }
  body {
             font-family: Arial, sans-serif;
