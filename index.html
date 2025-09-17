@@ -156,12 +156,25 @@ th {
 .participant {
   font-weight: bold;
 }
+
 @media (max-width: 480px) {
-  .tabla-principal {
-    max-width: 100vw;
+  .tabla1 {
+    display: block;
     width: 100%;
+    max-width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0 auto;
+    padding: 0;
     box-sizing: border-box;
-    margin: 100px auto;
+    border: none;
+    border-radius: 6px;
+    background-clip: padding-box;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
   }
 }
