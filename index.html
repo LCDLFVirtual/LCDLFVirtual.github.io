@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas Semanales</title>
     <style>
-   /* Fondo principal */
+   /* ===== BODY ===== */
 body {
-  background-color: #2a003f; /* morado oscuro */
+  background-color: #2a003f;
   background: url(fondo.jpg) no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
@@ -16,23 +16,25 @@ body {
   padding: 12px;
   overflow-x: hidden;
   line-height: 1.5;
-  color: #f5f5f5; /* texto claro por defecto */
+  color: #f5f5f5;
+  position: relative;
 }
+
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.45); /* oscurece un poco la imagen */
+  inset: 0;
+  background: rgba(0,0,0,0.45);
   z-index: -1;
 }
 
-/* Animación de aparición */
+/* ===== ANIMACIONES ===== */
 @keyframes fadeSlide {
   0% { opacity: 0; transform: translateY(15px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Títulos */
+/* ===== TITULOS ===== */
 .table-title {
   font-size: 26px;
   font-weight: bold;
@@ -41,15 +43,14 @@ body::before {
   padding: 10px 20px;
   display: inline-block;
   position: relative;
-  background: #ffffff; /* fondo claro para contraste */
-  color: #2a003f;      /* texto oscuro para destacar sobre el fondo blanco */
+  background: #ffffff;
+  color: #2a003f;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   letter-spacing: 1px;
   animation: fadeSlide 0.6s ease both;
 }
 
-/* Línea decorativa */
 .table-title::after {
   content: "";
   position: absolute;
@@ -63,25 +64,27 @@ body::before {
   opacity: 0.9;
   transition: width 0.3s ease, opacity 0.3s ease;
 }
+
 .table-title:hover::after {
   width: 80%;
   opacity: 1;
 }
 
-/* Tooltips */
+/* ===== TOOLTIP ===== */
 .tooltip {
   position: relative;
   display: inline-block;
   cursor: help;
 }
+
 .tooltip sup {
-  color: #add8ff; /* azul claro para resaltar sobre morado */
+  color: #lightblue;
   font-size: 0.8em;
   margin-left: 2px;
   font-weight: bold;
 }
+
 .tooltip .tooltip-box {
-  font-family: Arial, sans-serif;
   position: absolute;
   bottom: 125%;
   left: 50%;
@@ -90,7 +93,7 @@ body::before {
   color: #000;
   padding: 8px 10px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   backdrop-filter: blur(6px);
   white-space: normal;
   width: max-content;
@@ -101,6 +104,7 @@ body::before {
   transition: opacity 0.3s ease, transform 0.3s ease;
   text-align: left;
 }
+
 .tooltip .tooltip-box::after {
   content: "";
   position: absolute;
@@ -111,15 +115,16 @@ body::before {
   border-style: solid;
   border-color: #f5f6f7 transparent transparent transparent;
 }
+
 .tooltip:hover .tooltip-box {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(-6px) scale(1);
 }
 
-/* Tablas */
+/* ===== TABLAS ===== */
 table {
-  background: #ffffff; /* mantiene contraste */
+  background: #ffffff;
   color: #222;
   text-align: center;
   font-size: 80%;
@@ -127,32 +132,72 @@ table {
   max-width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
   border-radius: 12px;
   overflow: hidden;
   display: block;
   animation: fadeSlide 0.6s ease both;
   transition: box-shadow 0.3s ease;
 }
+
 table:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
+
 th, td {
   border: 1px solid darkgray;
   padding: 5px 6px;
   vertical-align: middle;
   transition: background 0.25s ease, color 0.25s ease;
 }
+
 th {
   font-weight: bold;
   background: #f1f1f1;
   letter-spacing: 0.5px;
 }
+
 tr:hover td {
-  background-color: rgba(255,255,255,0.08); /* sutil para resaltar fila */
+  background-color: rgba(255,255,255,0.08);
 }
 
-/* Colores de celdas */
+/* ===== LEYENDA ===== */
+.legend {
+  margin-top: 16px;
+  padding: 12px;
+  background: #ffffff;
+  color: #2a003f;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+  animation: fadeSlide 0.7s ease both;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 90%;
+  transition: transform 0.25s ease, background 0.25s ease;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.legend-item:hover {
+  transform: translateX(6px);
+  background: rgba(255,255,255,0.08);
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid darkgray;
+  margin-right: 8px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+/* ===== COLORES CELDAS ===== */
+/* Mantengo todos los colores intactos */
 .orchid { background: orchid; }
 .orange { background: orange; }
 .lightblue { background: lightblue; }
@@ -174,48 +219,12 @@ tr:hover td {
 .inmune { background: #FBF373; }
 .rod { background: #B22222; color: white; }
 
-/* Leyenda */
-.legend {
-  margin-top: 16px;
-  padding: 12px;
-  background: #ffffff;
-  color: #2a003f;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-  animation: fadeSlide 0.7s ease both;
-}
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  font-size: 90%;
-  transition: transform 0.25s ease, background 0.25s ease;
-  padding: 3px 6px;
-  border-radius: 6px;
-}
-.legend-item:hover {
-  transform: translateX(6px);
-  background: rgba(255,255,255,0.08);
-}
-.legend-box {
-  width: 20px;
-  height: 20px;
-  border: 1px solid darkgray;
-  margin-right: 8px;
-  border-radius: 6px;
-  flex-shrink: 0;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  table { font-size: 70%; margin: 16px auto; }
+  th, td { padding: 4px 5px; }
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  table {
-    font-size: 70%;
-    margin: 16px auto;
-  }
-  th, td {
-    padding: 4px 5px;
-  }
-}
 @media (max-width: 480px) {
   table {
     width: 100%;
@@ -226,18 +235,7 @@ tr:hover td {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     margin: 12px auto;
   }
-  th, td {
-    font-size: 60%;
-    padding: 3px 4px;
-  }
-}
-
-/* Extra */
-.participant {
-  font-weight: bold;
-}
-
-@media (max-width: 480px) {
+  th, td { font-size: 60%; padding: 3px 4px; }
   .tabla1 {
     display: table;
     width: auto;
@@ -248,13 +246,11 @@ tr:hover td {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-
-  body, html {
-    overflow-x: hidden;
-  }
+  body, html { overflow-x: hidden; }
 }
 
-
+/* ===== EXTRA ===== */
+.participant { font-weight: bold; }
 </style>
 </head>
 <h2 class="table-title">Concursantes:</h2>
