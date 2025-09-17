@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas Semanales</title>
     <style>
-      <style>
 /* Tooltips */
 .tooltip {
   position: relative;
@@ -68,12 +67,14 @@ table {
   background: #ffffff;
   text-align: center;
   font-size: 80%;
-  width: 10%;
+  width: fit-content;
+  max-width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
+  display: block;
 }
 th, td {
   border: 1px solid darkgray;
@@ -137,17 +138,13 @@ th {
 }
 @media (max-width: 480px) {
   table {
-    display: block;
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     border: none;
     border-radius: 6px;
     box-shadow: none;
-    margin: 12px 0;
-  }
-  .tabla1 {
-    width: 69.5%;
+    margin: 12px auto;
   }
   th, td {
     font-size: 60%;
@@ -160,7 +157,6 @@ th {
   font-weight: bold;
 }
 </style>
-    </style>
 </head>
 <p style=" font-size: 26px;"><b>Concursantes:</b></p>
 <table class="tabla1">
