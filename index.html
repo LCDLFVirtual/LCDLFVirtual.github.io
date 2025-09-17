@@ -6,7 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas Semanales</title>
     <style>
-   .table-title {
+   /* Fondo principal */
+body {
+  background-color: #2a003f; /* morado oscuro */
+  background: url(fondo.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 12px;
+  overflow-x: hidden;
+  line-height: 1.5;
+  color: #f5f5f5; /* texto claro por defecto */
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45); /* oscurece un poco la imagen */
+  z-index: -1;
+}
+
+/* Animación de aparición */
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+.table-title {
   font-size: 26px;
   font-weight: bold;
   text-align: center;
@@ -14,13 +41,12 @@
   padding: 10px 20px;
   display: inline-block;
   position: relative;
-  background: #fff;
+  background: #ffffff; /* fondo claro para contraste */
+  color: #2a003f;      /* texto oscuro para destacar sobre el fondo blanco */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   letter-spacing: 1px;
   animation: fadeSlide 0.6s ease both;
-  color: #222;
-  background-clip: text;
 }
 
 /* Línea decorativa */
@@ -33,16 +59,15 @@
   width: 60%;
   height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #6F4E37, #091F92, #FBF373);
+  background: linear-gradient(90deg, #FFD700, #FBF373, #FF69B4);
   opacity: 0.9;
   transition: width 0.3s ease, opacity 0.3s ease;
 }
-
-/* Efecto hover */
 .table-title:hover::after {
   width: 80%;
   opacity: 1;
 }
+
 /* Tooltips */
 .tooltip {
   position: relative;
@@ -50,7 +75,7 @@
   cursor: help;
 }
 .tooltip sup {
-  color: blue;
+  color: #add8ff; /* azul claro para resaltar sobre morado */
   font-size: 0.8em;
   margin-left: 2px;
   font-weight: bold;
@@ -92,33 +117,17 @@
   transform: translateX(-50%) translateY(-6px) scale(1);
 }
 
-/* General */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 12px;
-  overflow-x: hidden;
-  line-height: 1.5;
-  color: #222;
-}
-
-/* Animación de aparición */
-@keyframes fadeSlide {
-  0% { opacity: 0; transform: translateY(15px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 /* Tablas */
 table {
-  background: #ffffff;
+  background: #ffffff; /* mantiene contraste */
+  color: #222;
   text-align: center;
   font-size: 80%;
   width: fit-content;
   max-width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   overflow: hidden;
   display: block;
@@ -126,7 +135,7 @@ table {
   transition: box-shadow 0.3s ease;
 }
 table:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 th, td {
   border: 1px solid darkgray;
@@ -140,10 +149,10 @@ th {
   letter-spacing: 0.5px;
 }
 tr:hover td {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(255,255,255,0.08); /* sutil para resaltar fila */
 }
 
-/* Colores */
+/* Colores de celdas */
 .orchid { background: orchid; }
 .orange { background: orange; }
 .lightblue { background: lightblue; }
@@ -169,9 +178,10 @@ tr:hover td {
 .legend {
   margin-top: 16px;
   padding: 12px;
-  background: #fff;
+  background: #ffffff;
+  color: #2a003f;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25);
   animation: fadeSlide 0.7s ease both;
 }
 .legend-item {
@@ -185,7 +195,7 @@ tr:hover td {
 }
 .legend-item:hover {
   transform: translateX(6px);
-  background: rgba(0,0,0,0.04);
+  background: rgba(255,255,255,0.08);
 }
 .legend-box {
   width: 20px;
@@ -243,6 +253,7 @@ tr:hover td {
     overflow-x: hidden;
   }
 }
+
 
 </style>
 </head>
@@ -533,7 +544,7 @@ tr:hover td {
     <td style="background:khaki;">2 dias</td>
   </tr>
 </table>
-<p style=" font-size: 26px;"><b>Estadísticas:</b></p>
+<h2 class="table-title">Estadísticas:</h2>
     <table>
         <thead>
             <tr>
@@ -1165,7 +1176,7 @@ tr:hover td {
             <span>Abandonó la competencia.</span>
         </div>
 </div>
-<p style=" font-size: 26px;"><b>Tabla de nominaciones:</b></p>
+<h2 class="table-title">Tabla de nominaciones:</h2>
 <table>
         <thead>
             <tr>
@@ -1740,8 +1751,7 @@ tr:hover td {
             </tr>
         </tbody>
     </table>
-
-    <p style=" font-size: 26px;"><b>Total de votos recibidos:</b></p>
+<h2 class="table-title">Total de votos recibidos:</h2>
 <table>
         <thead>
             <tr>
@@ -2320,7 +2330,7 @@ tr:hover td {
             </tr>
         </tbody>
     </table>
-    
+    <div class="legend">
     <div class="legend-item">
             <div class="legend-box black"></div>
             <span>Nominado(a).</span>
@@ -2345,6 +2355,7 @@ tr:hover td {
             <div class="legend-box inmune"></div>
             <span>Inmune.</span>
         </div>
+      </div>
 
 </body>
 </html>
