@@ -26,15 +26,15 @@
   background-color: #f5f6f7;
   color: #000;
   padding: 8px 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   white-space: normal;
   width: max-content;
   max-width: 250px;
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   text-align: left;
 }
 .tooltip .tooltip-box::after {
@@ -50,6 +50,7 @@
 .tooltip:hover .tooltip-box {
   opacity: 1;
   visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 /* General */
@@ -60,6 +61,7 @@ body {
   padding: 12px;
   overflow-x: hidden;
   line-height: 1.5;
+  color: #222;
 }
 
 /* Tablas */
@@ -71,10 +73,14 @@ table {
   max-width: 100%;
   border-collapse: collapse;
   margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   overflow: hidden;
   display: block;
+  transition: box-shadow 0.3s ease;
+}
+table:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 th, td {
   border: 1px solid darkgray;
@@ -84,6 +90,11 @@ th, td {
 th {
   font-weight: bold;
   background: #f1f1f1;
+  letter-spacing: 0.5px;
+}
+tr:hover td {
+  background-color: rgba(0,0,0,0.03);
+  transition: background 0.2s ease;
 }
 
 /* Colores */
@@ -111,19 +122,27 @@ th {
 /* Leyenda */
 .legend {
   margin-top: 16px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-size: 90%;
+  transition: transform 0.2s ease;
+}
+.legend-item:hover {
+  transform: translateX(4px);
 }
 .legend-box {
   width: 20px;
   height: 20px;
   border: 1px solid darkgray;
-  margin-right: 6px;
-  border-radius: 4px;
+  margin-right: 8px;
+  border-radius: 6px;
 }
 
 /* Responsivo */
@@ -143,7 +162,7 @@ th {
     white-space: nowrap;
     border: none;
     border-radius: 6px;
-    box-shadow: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin: 12px auto;
   }
   th, td {
