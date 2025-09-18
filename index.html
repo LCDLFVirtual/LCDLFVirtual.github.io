@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas Semanales</title>
     <style>
-/* Fondo general */
 body {
   background: url(fondo.jpg) center center / cover no-repeat fixed;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -29,13 +28,11 @@ body::before {
   z-index: -1;
 }
 
-/* Animación de entrada */
 @keyframes fadeSlide {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Título de tabla */
 .table-title {
   font-size: 26px;
   font-weight: bold;
@@ -71,7 +68,6 @@ body::before {
   opacity: 1;
 }
 
-/* Tooltip */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -122,7 +118,6 @@ body::before {
   transform: translateX(-50%) translateY(-6px) scale(1);
 }
 
-/* Tablas */
 table {
   background: #fff;
   color: #222;
@@ -157,11 +152,16 @@ th {
   letter-spacing: 0.5px;
 }
 
-tr:hover td {
-  background-color: rgba(255, 255, 255, 0.08);
+tr {
+  transition: transform 0.2s ease; /* transición suave */
 }
 
-/* Leyenda */
+tr:hover {
+  transform: scale(1.03); 
+  z-index: 2;             
+  position: relative;     
+}
+
 .legend {
   margin-top: 16px;
   padding: 12px;
@@ -196,7 +196,6 @@ tr:hover td {
   flex-shrink: 0;
 }
 
-/* Clases de color */
 .orchid { background: orchid; }
 .orange { background: orange; }
 .lightblue { background: lightblue; }
@@ -218,7 +217,6 @@ tr:hover td {
 .inmune { background: #FBF373; }
 .rod { background: #B22222; color: white; }
 
-/* Responsivo */
 @media (max-width: 768px) {
   table { font-size: 70%; margin: 16px auto; }
   th, td { padding: 4px 5px; }
@@ -252,7 +250,6 @@ tr:hover td {
   }
 }
 
-/* Participante */
 .participant {
    font-weight: bold;
   text-transform: uppercase;
@@ -278,7 +275,7 @@ tr:hover td {
     <td>Actor y Modelo</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -289,7 +286,7 @@ tr:hover td {
     <td>Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -304,7 +301,7 @@ tr:hover td {
     <td>Presentadora e influencer</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -313,7 +310,7 @@ tr:hover td {
     <td>Luchadora profesional</td>
    <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -321,8 +318,8 @@ tr:hover td {
     <td>23</td>
     <td>Actriz y Modelo</td>
    <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -331,7 +328,7 @@ tr:hover td {
     <td>Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -346,7 +343,7 @@ tr:hover td {
     <td>Cantante</td>
    <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -355,7 +352,7 @@ tr:hover td {
     <td>Chica reality</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -364,7 +361,7 @@ tr:hover td {
     <td>Drag Queen</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -373,7 +370,7 @@ tr:hover td {
     <td>Cantante y Actriz</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -382,16 +379,7 @@ tr:hover td {
     <td>Actriz y Comediante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Dalilah Polanco</td>
-    <td>53</td>
-    <td>Actriz</td>
-    <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 dias</td>
   </tr>
   <tr>
     <td></td>
@@ -405,8 +393,8 @@ tr:hover td {
     <td>28</td>
     <td>Cantante/Rapero</td>
    <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -414,8 +402,8 @@ tr:hover td {
     <td>31</td>
     <td>Creadora de contenido</td>
     <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -430,7 +418,7 @@ tr:hover td {
     <td>Influencer/tiktoker</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -439,7 +427,7 @@ tr:hover td {
     <td>Periodista y Presentadora</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
     <tr>
     <td></td>
@@ -448,7 +436,7 @@ tr:hover td {
     <td>Actriz y Productora</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
     <tr>
     <td></td>
@@ -462,8 +450,8 @@ tr:hover td {
     <td>36</td>
     <td>Influencer</td>
     <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -471,8 +459,8 @@ tr:hover td {
     <td>49</td>
     <td>Actriz y Modelo</td>
     <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -481,7 +469,7 @@ tr:hover td {
     <td>Actriz</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -490,7 +478,7 @@ tr:hover td {
     <td>Streamer</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
     <tr>
     <td></td>
@@ -499,7 +487,7 @@ tr:hover td {
     <td>Actriz y Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -508,7 +496,7 @@ tr:hover td {
     <td>Drag Queen</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -517,7 +505,7 @@ tr:hover td {
     <td>Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -526,7 +514,7 @@ tr:hover td {
     <td>Actriz y Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
     <td>1</td>
-    <td style="background:khaki;">2 dias</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -534,8 +522,8 @@ tr:hover td {
     <td>48</td>
     <td>Cantante</td>
     <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
   <tr>
     <td></td>
@@ -543,8 +531,17 @@ tr:hover td {
     <td>27</td>
     <td>Cosmetóloga e Influencer</td>
     <td style="background-color:lightgreen;">En competencia</td>
-    <td></td>
-    <td style="background:khaki;">2 dias</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
+  </tr>
+  <tr>
+    <td>27.ª</td>
+    <td>Dalilah Polanco</td>
+    <td>53</td>
+    <td>Actriz</td>
+    <td style="background-color: #fcf;">1.<sup>er</sup> abandono</td>
+    <td>1</td>
+    <td style="background:khaki;">3 días</td>
   </tr>
 </table>
 <h2 class="table-title">Estadísticas:</h2>
@@ -574,7 +571,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Agustín</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvado</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -614,7 +611,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Gomita</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -635,7 +632,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Alexa</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -656,7 +653,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Julieta</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="orange">Nominada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -677,7 +674,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Jennie</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -719,7 +716,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Karime</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -740,7 +737,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Burrita</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -761,7 +758,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Lolita</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -781,7 +778,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Florinda</td>
                <td class="orchid">Entra</td>
-               <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -799,29 +796,9 @@ tr:hover td {
                 <td></td>
             </tr>
             <tr>
-                <td class="participant">Dalilah</td>
-               <td class="orchid">Entra</td>
-               <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-            <tr>
                 <td class="participant">Milo J</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="salvado" style="color: white">Salvado</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -841,7 +818,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Carolina D.</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="ccff66">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -862,7 +839,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Carolina M.</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -882,7 +859,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Cristina</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -903,7 +880,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Mimi</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -924,7 +901,7 @@ tr:hover td {
             <tr>
                 <td class="participant">AimeP3</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="orange">Nominada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -945,7 +922,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Marlene</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="orange">Nominada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -966,7 +943,7 @@ tr:hover td {
             <tr>
                 <td class="participant">María</td>
                 <td class="orchid">Entra</td>
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -986,7 +963,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Mernuel</td>
                 <td class="orchid">Entra</td> 
-                <td></td>
+                <td class="lightblue">Salvado</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1025,7 +1002,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Pabllo</td>
                 <td colspan="1 "class="orchid">Entra</td>  
-                <td></td>
+                <td class="lightblue">Salvado</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1045,7 +1022,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Sabrina</td>
                 <td colspan="1 "class="orchid">Entra</td>  
-                <td></td>
+                <td class="lightblue">Salvada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1085,7 +1062,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Shakira</td>
                 <td colspan="1 "class="orchid">Entra</td> 
-                <td></td>
+                <td class="orange">Nominada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1105,7 +1082,7 @@ tr:hover td {
             <tr>
                 <td class="participant">Valentina</td>
                 <td colspan="1 "class="orchid">Entra</td> 
-                <td></td>
+                <td class="orange">Nominada</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1122,6 +1099,13 @@ tr:hover td {
                 <td></td>
                 <td></td>
             </tr>
+            <tr>
+                <td class="participant">Dalilah</td>
+               <td class="orchid">Entra</td>
+               <td class="orange">Nominada</td>
+               <td class="fcf">Abandona</td>
+              <td colspan="14" class="grey"></td>
+               </tr> 
         </tbody>
     </table>
 <div class="legend">
@@ -1434,26 +1418,6 @@ tr:hover td {
                 
             </tr>
             <tr>
-                <td class="participant">Dalilah</td>
-               <td>NO NOMINO</td>
-               <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-                
-            <tr>
                 <td class="participant">Milo J</td>
                 <td>2 Gomita <br> 1 Shakira</td>
                 <td></td>
@@ -1516,7 +1480,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Cristina</td>
-                <td>2 Dalilah<br> 1 </td>
+                <td>2 Dalilah<br> 1 Carolina D. </td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1600,7 +1564,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">María</td>
-                <td>2 Karime <br>1 Mimi</td>
+                <td>2 Mimi <br>1 Karime</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1659,7 +1623,7 @@ tr:hover td {
                 
             <tr>
                 <td class="participant">Pabllo</td>
-                <td ></td>  
+                <td>2 Marlene <br>1 Shakira</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1756,6 +1720,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
             </tr>
+            <tr>
+                <td class="participant">Dalilah</td>
+               <td>NO NOMINO</td>
+               <td colspan="15" class="fcf" style="font-style: italic;">Abandona<br>(Día 3)</td>
+            </tr>
         </tbody>
     </table>
 <h2 class="table-title">Total de votos recibidos:</h2>
@@ -1788,7 +1757,7 @@ tr:hover td {
         <tbody>
             <tr>
                 <td class="participant">Agustín</td>
-                <td></td>
+                <td>0</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1828,6 +1797,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Gomita</td>
+                <td>3</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1843,12 +1813,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td class="participant">Alexa</td>
-                <td></td>
+                <td>0</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1868,7 +1837,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Julieta</td>
-                <td class=></td>
+                <td class="black" style="color: white;">6</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1884,11 +1853,12 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>6</td>
                
             </tr>
             <tr>
                 <td class="participant">Jennie</td>
+                <td>4</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1904,8 +1874,7 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>4</td>
             
             </tr>
             <tr>
@@ -1931,7 +1900,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Karime</td>
-                <td>3</td>
+                <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1947,11 +1916,12 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>4</td>
                
             </tr>
             <tr>
                 <td class="participant">Burrita</td>
+                <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1967,13 +1937,12 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>4</td>
               
             </tr> 
             <tr>
                 <td class="participant">Lolita</td>
-                <td></td>
+                <td>0</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2009,30 +1978,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>3</td>
             </tr>
             <tr>
-                <td class="participant">Dalilah</td>
-               <td></td>
-               <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                
-            <tr>
                 <td class="participant">Milo J</td>
+                <td class="salvado" style="color: white;">6</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2048,12 +1998,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>6</td>
             </tr>
             <tr>
                 <td class="participant">Carolina D.</td>
-                <td>3</td>
+                <td class="salvado" style="color: white;">8</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2069,12 +2018,12 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>8</td>
                
             </tr>
             <tr>
                 <td class="participant">Carolina M.</td>
-                <td></td>
+                <td>0</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2094,7 +2043,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Cristina</td>
-                <td></td>
+                <td>0</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2115,6 +2064,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Mimi</td>
+                <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2130,13 +2080,12 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>2</td>
                 
             </tr>
             <tr>
                 <td class="participant">AimeP3</td>
-                <td ></td>
+                <td class="black" style="color: white;">5</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2152,11 +2101,32 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>5</td>
                
             </tr>
             <tr>
                 <td class="participant">Marlene</td>
+                <td class="black" style="color: white;">7</td> 
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>7</td>
+              
+            </tr>
+            <tr>
+                <td class="participant">María</td>
                 <td >3</td>
                 <td></td>
                 <td></td>
@@ -2173,32 +2143,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-              
-            </tr>
-            <tr>
-                <td class="participant">María</td>
-                <td ></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>3</td>
             </tr>
             <tr>
                 <td class="participant">Mernuel</td>
-                <td ></td> 
+                <td>0</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2218,7 +2167,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Ninel</td>
-                <td class="inmune" >-</td>
+                <td class="inmune" >–</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2237,7 +2186,7 @@ tr:hover td {
                 <td></td>
             <tr>
                 <td class="participant">Pabllo</td>
-                <td></td>  
+                <td>2</td>  
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2253,11 +2202,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>2</td>
             </tr>
             <tr>
                 <td class="participant">Sabrina</td>
-                <td></td>  
+                <td>1</td>  
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2273,11 +2222,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>1</td>
             </tr>
             <tr>
                 <td class="participant">Sheyla</td>
-                <td class=" black" style="color: white;">–</td> 
+                <td class=" black" style="color: white;"><s>4</s></td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2297,7 +2246,7 @@ tr:hover td {
             </tr>
             <tr>
                 <td class="participant">Shakira</td>
-                <td >3</td> 
+                <td class="black" style="color: white;">10</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2313,11 +2262,11 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>10</td>
             </tr>
             <tr>
                 <td class="participant">Valentina</td>
-                <td>5</td>
+                <td class="black" style="color: white;">9</td> 
                 <td></td>
                 <td></td>
                 <td></td>
@@ -2333,8 +2282,14 @@ tr:hover td {
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>9</td>
             </tr>
+            <tr>
+                <td class="participant">Dalilah</td>
+               <td class="black" style="color: white;">8</td> 
+               <td colspan="15" class="fcf" style="font-style: italic">1.er abandono</td>
+                <td>8</td>
+                </tr>
         </tbody>
     </table>
     <div class="legend">
@@ -2352,7 +2307,7 @@ tr:hover td {
         </div>
         <div class="legend-item">
             <div class="legend-box salvado"></div>
-            <span>Nominado(a) y salvado por el líder.</span>
+            <span>Nominado(a) y salvado por el líder o por prueba de salvación.</span>
         </div>
         <div class="legend-item">
             <div class="legend-box lightgreen"></div>
